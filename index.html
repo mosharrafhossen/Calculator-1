@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculator" role="application" aria-label="Advanced calculator">
+        <div class="calc-header">
+            <div class="title-group">
+                <div class="title">Calculator</div>
+                <div class="subtitle">Memory + History + Keyboard Support</div>
+            </div>
+            <div class="theme-toggle" id="themeToggle" tabindex="0" role="button" aria-pressed="false">
+                <span>Theme</span>
+                <div class="switch" aria-hidden="true">
+                <div class="switch-thumb"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="display" aria-live="polite">
+            <div class="info-row">
+                <div class="memory-indicator" id="memoryIndicator">M</div>
+                <div class="history-toggle" id="historyBtn">
+                <span class="icon">⟳</span>
+                <span>History</span>
+                </div>
+            </div>
+            <div class="prev" id="prev"></div>
+            <div class="curr" id="curr">0</div>
+        </div>
+
+        <div class="history-panel" id="historyPanel">
+            <ul class="history-list" id="historyList"></ul>
+        </div>
+
+        <div class="memory-row">
+            <button class="mem small" data-action="mc" title="Memory Clear">MC</button>
+            <button class="mem small" data-action="mr" title="Memory Recall">MR</button>
+            <button class="mem small" data-action="mplus" title="Memory Plus">M+</button>
+            <button class="mem small" data-action="mminus" title="Memory Minus">M−</button>
+        </div>
+
+        <div class="keys" id="keys">
+            <button class="danger small" data-action="clear">C</button>
+            <button class="small" data-action="back">⌫</button>
+            <button class="small op" data-value="%" title="Modulo">%</button>
+            <button class="op small" data-value="/" title="Divide">÷</button>
+
+            <button data-value="7">7</button>
+            <button data-value="8">8</button>
+            <button data-value="9">9</button>
+            <button class="op" data-value="*" title="Multiply">×</button>
+
+            <button data-value="4">4</button>
+            <button data-value="5">5</button>
+            <button data-value="6">6</button>
+            <button class="op" data-value="-" title="Minus">−</button>
+
+            <button data-value="1">1</button>
+            <button data-value="2">2</button>
+            <button data-value="3">3</button>
+            <button class="op" data-value="+" title="Plus">+</button>
+
+            <button class="wide" data-value="0">0</button>
+            <button data-value=".">.</button>
+            <button class="equal wide" data-action="equals">=</button>
+        </div>
+
+        <div class="kbd-hint">
+            <span class="kbd">Enter</span> = Calculate
+            <span class="kbd">Esc</span> = Clear
+            <span class="kbd">Backspace</span> = Delete
+            <span class="kbd">M</span> = History toggle
+        </div>
+  </div>
+
+  <script src="js/custom.js"></script>
+
+</body>
+</html>
